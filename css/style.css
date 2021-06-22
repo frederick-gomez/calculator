@@ -65,5 +65,5 @@ body {
 
 .btn:hover {
 	cursor: pointer;
-	color: green;
+	color: red;
 }
