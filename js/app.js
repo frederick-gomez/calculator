@@ -1,5 +1,4 @@
-const displayNumbers = document.getElementById('display-num'),
-one = document.getElementById('1'),
+const one = document.getElementById('1'),
 two = document.getElementById('2'),
 three = document.getElementById('3'),
 four = document.getElementById('4'),
@@ -11,8 +10,17 @@ nine = document.getElementById('9'),
 zero = document.getElementById('0'),
 comma = document.getElementById(',');
 
-function renderNumbers() {
-  
+//Works as intended
+function fetchNumbers(num) {
+  let fetchNum = num.innerText;
+  return fetchNum;
+}
+//Can't append new number
+function renderNumbers(num) {
+  const displayNumbers = document.getElementById('display-num').innerText;
+  let currentNum = displayNumbers;
+  let number = fetchNumbers(num);
+  currentNum.appendChild(number);
 }
 
-one.addEventListener('click', )
+one.addEventListener('click', renderNumbers(one));
