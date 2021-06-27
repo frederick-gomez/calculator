@@ -1,14 +1,10 @@
-const one = document.getElementById('1'),
-	two = document.getElementById('2'),
-	three = document.getElementById('3'),
-	four = document.getElementById('4'),
-	five = document.getElementById('5'),
-	six = document.getElementById('6'),
-	seven = document.getElementById('7'),
-	eight = document.getElementById('8'),
-	nine = document.getElementById('9'),
-	zero = document.getElementById('0'),
-	comma = document.getElementById(',');
+const numberButtons = document.querySelectorAll('[data-number]');
+const operandButtons = document.querySelectorAll('[data-operand]');
+const equalButton = document.querySelector('[data-equal]');
+const deleteButton = document.querySelector('[data-delete]');
+const clearButton = document.querySelector('[data-all-clear]');
+const prevNum = document.getElementById('prev-num');
+const currentNum = document.getElementById('current-num');
 
 //Can't append new number
 function renderNumbers(num) {
@@ -16,5 +12,3 @@ function renderNumbers(num) {
 	let fetchNum = num.value;
 	currentNumbers.textContent = currentNumbers + fetchNum;
 }
-
-one.addEventListener('click', renderNumbers(one));
