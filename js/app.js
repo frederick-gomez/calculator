@@ -28,7 +28,6 @@ function chooseOperation(operation) {
 	if (!currentNum.innerText) return;
 	if (prevNum !== '') {
 		compute();
-		updateDisplay();
 	}
 	prevNum.innerText = currentNum.innerText;
 	operand.innerText = operation;
@@ -63,21 +62,17 @@ function compute() {
 	operand.innerText = '';
 }
 
-function updateDisplay() {}
-
 //Event Listeners
 
 numberButtons.forEach((button) => {
 	button.addEventListener('click', () => {
 		appendNumber(button.innerText);
-		updateDisplay();
 	});
 });
 
 operandButtons.forEach((operand) => {
 	operand.addEventListener('click', () => {
 		chooseOperation(operand.innerText);
-		updateDisplay();
 	});
 });
 
